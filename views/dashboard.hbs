@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+</head>
+<style>
+ 
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+img.movie-poster {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+   img {
+      width: 20%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+h2 {
+  margin-top: 10px;
+  color: #333;
+}
+
+p {
+  margin-top: 8px;
+  color: #555;
+}
+
+button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+</style>
+<body>
+  <h1>Welcome To Final Project</h1>
+  
+  
+  <h1>Top 10 Movies on IMDB</h1>
+<ul>
+  {{#each topMovies}}
+    <li>
+      <img src="{{poster}}" alt="{{title}} Poster">
+      <h2>{{title}}</h2>
+      <p>IMDb Rating: {{imdb.rating}}</p>
+      <!-- Add other relevant information -->
+    </li>
+  {{/each}}
+</ul>
+  
+  <!-- Login button with a link to the login page -->
+  <button onclick="location.href='/login'">Login</button>
+</body>
+</html>
